@@ -13,4 +13,23 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
+
+@import "bootstrap/scss/functions"; 
+@import "bootstrap/scss/variables";
+$theme-colors: ( 
+    default: #999999,
+    primary: rgb(228, 177, 59),
+    secondary: #B73C50,
+    info: rgb(24, 26, 39),
+    success: rgb(122, 176, 74),
+    warning: rgb(247, 160, 18),
+    danger: rgb(244, 67, 54),
+    dark: #3C4858,
+    light: #F9F7F6,
+    light_shades: #F9F7F6,
+    light_accent: #B58EA3,
+    main: #DFB23A,
+    dark_accent: #B73C50,
+    dark_shades: #292D49
+    );
+@import "bootstrap";
