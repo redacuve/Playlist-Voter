@@ -1,5 +1,5 @@
 class Track < ApplicationRecord
-    belongs_to :playlist
+    has_and_belongs_to_many :track
     validates :name, presence: true
     validates :title, presence: true
     validates :artist, presence: true
