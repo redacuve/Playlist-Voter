@@ -31,6 +31,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # My gems on this project
 # Using Bootstrap library
 gem 'bootstrap'
+# Using RSpotify for pack the call to the Spotify API
+gem 'rspotify'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
