@@ -1,1 +1,16 @@
-<h1>Searched track</h1>
+<h1>Searched track Results</h1>
+<% unless @results.blank? %>
+    <ul>
+    <% @results.each do |result| %>
+        <li><img src="<%= result.album.images[2]["url"] %>" height="64"> <%= result.name %> | <%= result.artists[0].name %> | <%= result.album.name %></li>
+    <% end %>
+    </ul>
+<% else %>
+    <h2>No results Found</h2>
+<% end %>
+<h2>Search Again </h2>
+<%= form_with(url: tracks_search_path, method: "get", local: true) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.submit "Search" %>
+<% end %>
