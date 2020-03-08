@@ -1,7 +1,7 @@
 <h1>Tracks index</h1>
 <h2>Search Track</h2>
-<%= form_with(url: tracks_search_path, method: "get", local: true) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.submit "Search" %>
+<%= form_with(url: tracks_search_path, method: "get", local: true, class: "form-inline") do |f| %>
+  <%= f.label :title, "Track Title:", class: "mr-2" %>
+  <%= f.text_field :title, class: "form-control mr-2 mb-2 mb-sm-0", placeholder: "Search Track" %>
+  <%= f.submit "Search", class: "btn btn-secondary" %>
 <% end %>
